@@ -2,25 +2,35 @@ import React from "react";
 import "./Product.css";
 import { ReactComponent as HeartFull } from "../../assets/icons/heart.svg";
 import { ReactComponent as HeartEmpty } from "../../assets/icons/heart_gray.svg";
+import StarRating from "../Sidebar/StarRating/StarRating";
 
-const Product = () => {
+const Product = ({
+  tag,
+  brand,
+  title,
+  price,
+  formerPrice,
+  additionalInfo,
+  rating,
+}) => {
   return (
     <div className="product">
-      <div className="product__media">
-        <img src="../../assets/boiler.png" alt="" />
-        <div className="product__tag">Risparmi il 20%</div>
-        <HeartEmpty />
+      <div
+        className="product__image"
+        style={{ backgroundImage: "url('boiler.png')" }}
+      >
+        <div className="product__tag">{tag}</div>
+        <HeartEmpty className="product__favorite" />
       </div>
       <div className="product__info">
-        <h3 className="product__brand">Ariston</h3>
-        <p>Matis condens - Condensing Boiler 24 kW Methane - Indoor</p>
+        <h3 className="product__brand">{brand}</h3>
+        <p>{title}</p>
         <div className="product__price">
-          <h2 className="product__priceNew">$1350,00 EUR</h2>
-          <h4 className="product__priceOld">1570,00 EUR</h4>
+          <h2 className="product__priceNew">{`$${price} EUR`}</h2>
+          <h4 className="product__priceOld">{`$${formerPrice} EUR`}</h4>
         </div>
-        <p className="product__additionalInfo">
-          Sopralluogo e installazione inclusi
-        </p>
+        <p className="product__additionalInfo">{additionalInfo}</p>
+        <StarRating rating={rating} />
       </div>
     </div>
   );
