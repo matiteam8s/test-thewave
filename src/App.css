@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "Avenir-Black";
+    src: local('Avenir-Black'),
+         url('./fonts/Avenir-Black.woff') format('woff'),
+         url('./fonts/Avenir-Black.woff2') format('woff2');
+        }
+@font-face {
+    font-family: "Avenir-Book";
+    src: local('Avenir-Book'),
+            url('./fonts/Avenir-Book.woff') format('woff'),
+            url('./fonts/Avenir-Book.woff2') format('woff2');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.App{
+    width: 100vw;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+    max-width: 1440px;
+    margin:0 auto;
+    padding:20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.products{
+    display:flex;
+    flex:1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
