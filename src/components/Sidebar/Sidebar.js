@@ -14,7 +14,7 @@ import {
   tipologia,
   marche,
   scegliPer,
-} from "../../data/data";
+} from "../../data/sidebarData";
 import StarRating from "./StarRating/StarRating";
 
 const BlueCheckbox = withStyles({
