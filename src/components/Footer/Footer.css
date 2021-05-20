@@ -1,0 +1,35 @@
+.footer{
+    display: flex;
+    height: 65px;
+    background-color: #5738FF;
+    color: white;
+    font-family: Avenir-Book;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position:fixed;
+    bottom:0;
+    right: 0;
+    left: 0;
+}
+
+.footer > p {
+    font-size: 20px;
+}
+
+.footer > button{
+    font-family: Avenir-Black;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border:2px solid #B5B5B5;
+    background:none;
+    color:#B5B5B5;
+    padding:15px 40px;
+    cursor: pointer;
+}
+
+.footer > button:hover{
+    background-color: #B5B5B5;
+    color: #000000;
+}
