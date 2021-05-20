@@ -80,3 +80,7 @@
     font-weight: 900;
 }
 
+.full > path {
+    fill: red;
+} 
+

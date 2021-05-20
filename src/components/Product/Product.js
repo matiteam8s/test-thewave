@@ -18,11 +18,23 @@ const Product = ({
   rating,
   favorites,
   setFavorites,
+  toCompare,
+  setToCompare,
+  fromCompare,
 }) => {
-  const [compare, setCompare] = useState(false);
+  const handleChange = () => {
+    let toCompareArray = toCompare;
+    const found = toCompare.find((f) => f.id === product.id);
 
-  const handleChange = (event) => {
-    setCompare((compare) => !compare);
+    if (found) {
+      toCompareArray = toCompareArray.filter((f) => f.id !== product.id);
+    }
+
+    if (!found && toCompareArray.length < 3) {
+      toCompareArray = [...toCompare, product];
+    }
+
+    setToCompare(toCompareArray);
   };
 
   const addFavorite = (product) => {
@@ -49,12 +61,14 @@ const Product = ({
         {favorites && favorites.includes(product) ? (
           <HeartFull
             onClick={(e) => addFavorite(product)}
-            className="product__favorite"
+            className="product__favorite full"
+            style={{ display: fromCompare && "none" }}
           />
         ) : (
           <HeartEmpty
             onClick={(e) => addFavorite(product)}
             className="product__favorite"
+            style={{ display: fromCompare && "none" }}
           />
         )}
       </div>
@@ -86,19 +100,23 @@ const Product = ({
         </p>
         <div className="product__ratingRow">
           <StarRating rating={rating} />
-          <FormControlLabel
-            control={
-              <Checkbox
-                onChange={handleChange}
-                checked={compare}
-                name="confronta"
-                color="#B5B5B5"
-              />
-            }
-            label="CONFRONTA"
-            labelPlacement="start"
-            className="product__confronta"
-          />
+          {!fromCompare && (
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  checked={
+                    toCompare && toCompare.find((f) => f.id === product.id)
+                  }
+                  name="confronta"
+                  color="#B5B5B5"
+                />
+              }
+              label="CONFRONTA"
+              labelPlacement="start"
+              className="product__confronta"
+            />
+          )}
         </div>
       </div>
     </div>

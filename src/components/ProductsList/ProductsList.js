@@ -4,7 +4,7 @@ import "./ProductsList.css";
 import { products } from "../../data/productsData";
 import Pagination from "../Pagination/Pagination";
 
-const ProductsList = ({ wishList, setWishList }) => {
+const ProductsList = ({ toCompare, setToCompare }) => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,8 @@ const ProductsList = ({ wishList, setWishList }) => {
             formerPrice={product.formerPrice}
             additionalInfo={product.additionalInfo}
             rating={product.rating}
-            setWishList={setWishList}
+            toCompare={toCompare}
+            setToCompare={setToCompare}
             favorites={favorites}
             setFavorites={setFavorites}
           />
