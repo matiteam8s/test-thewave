@@ -17,8 +17,8 @@ const StarRating = ({ rating, quantity }) => {
 
   return (
     <div className="stars-outlined">
-      <div className="stars-filled" style={StarStyles()}></div>(
-      {quantity && quantity})
+      <div className="stars-filled" style={StarStyles()}></div>
+      {quantity && <span>({quantity})</span>}
     </div>
   );
 };

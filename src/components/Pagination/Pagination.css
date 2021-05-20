@@ -1,0 +1,27 @@
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination__prev, .pagination__next{
+    font-size: 20px;
+    font-family: Avenir-Book;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.pagination__prev > span, .pagination__next > span {
+    font-size: 30px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.pagination__prev{
+    color:#00000080;
+}
+
+.pagination__next{
+    color:#5738FF;
+}

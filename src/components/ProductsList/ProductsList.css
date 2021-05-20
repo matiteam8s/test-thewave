@@ -3,4 +3,19 @@
     display: flex;
     margin:0 auto;
     flex-wrap: wrap;
+    
+}
+
+.products__list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #0000001A;
+    padding-bottom: 50px;
+}
+
+.products__pagination{
+    width: 100%;
+    padding: 50px 0;
+    height: 50px;
 }
