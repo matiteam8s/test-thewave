@@ -48,6 +48,7 @@ const Sidebar = () => {
             key={s.name}
             control={<BlueCheckbox checked={s.checked} name={s.name} />}
             label={`${s.name} (${s.quantity})`}
+            className="sidebar__items"
             style={{ color: s.checked && "#5738FF" }}
           />
         ))}
@@ -55,6 +56,7 @@ const Sidebar = () => {
         <h3 className="sidebar__subtitle">MARCHE</h3>
         {marche.map((m) => (
           <FormControlLabel
+            className="sidebar__items"
             key={m.name}
             control={<BlueCheckbox checked={m.checked} name={m.name} />}
             label={`${m.name} (${m.quantity})`}
@@ -64,6 +66,7 @@ const Sidebar = () => {
         <h3 className="sidebar__subtitle">TIPOLOGIA</h3>
         {tipologia.map((t) => (
           <FormControlLabel
+            className="sidebar__items"
             key={t.name}
             control={<BlueCheckbox checked={t.checked} name={t.name} />}
             label={`${t.name} (${t.quantity})`}
@@ -73,6 +76,7 @@ const Sidebar = () => {
         <h3 className="sidebar__subtitle">ALIMENTAZIONE</h3>
         {alimentazione.map((a) => (
           <FormControlLabel
+            className="sidebar__items"
             key={a.name}
             control={<BlueCheckbox checked={a.checked} name={a.name} />}
             label={`${a.name} (${a.quantity})`}
@@ -82,6 +86,7 @@ const Sidebar = () => {
         <h3 className="sidebar__subtitle">POTENZA NOMINALE</h3>
         {potenzaNominale.map((pot) => (
           <FormControlLabel
+            className="sidebar__items"
             key={pot.name}
             control={<BlueCheckbox checked={pot.checked} name={pot.name} />}
             label={`${pot.name} (${pot.quantity})`}
@@ -92,6 +97,7 @@ const Sidebar = () => {
         {utilizzo.map((util) => (
           <FormControlLabel
             key={util.name}
+            className="sidebar__items"
             control={<BlueCheckbox checked={util.checked} name={util.name} />}
             label={`${util.name} (${util.quantity})`}
             style={{ color: util.checked && "#5738FF" }}
@@ -100,6 +106,7 @@ const Sidebar = () => {
         <h3 className="sidebar__subtitle">RECENSIONI</h3>
         {stars.map((stars) => (
           <FormControlLabel
+            className="sidebar__items"
             key={stars.name}
             control={<BlueCheckbox checked={stars.checked} name={stars.name} />}
             label={

@@ -6,20 +6,19 @@ const StarRating = ({ rating, quantity }) => {
 
   const starPercentage = (rating / maxStars) * 100;
 
-  // Round the percentage
-  const starPercentageRounded = Math.round(starPercentage);
-
   const StarStyles = () => {
     return {
-      width: starPercentageRounded + "%",
+      width: starPercentage + "%",
     };
   };
 
   return (
-    <div className="stars-outlined">
-      <div className="stars-filled" style={StarStyles()}></div>
+    <>
+      <div className="stars-outlined">
+        <div className="stars-filled" style={StarStyles()}></div>
+      </div>
       {quantity && <span>({quantity})</span>}
-    </div>
+    </>
   );
 };
 

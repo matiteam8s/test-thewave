@@ -104,7 +104,7 @@ export const utilizzo = [
 export const stars = [
   {
     rating: 5,
-    quantity: 14,
+    quantity: 3,
     checked: false,
   },
   {

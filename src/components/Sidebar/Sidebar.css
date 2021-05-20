@@ -21,12 +21,12 @@
 .sidebar__subtitle{
     letter-spacing: 0.6px;
     font-family: Avenir-Black;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .sidebar__subtitleBlue{
     font-family: Avenir-Book;
-    font-size: 15px;
+    font-size: 20px;
     color:#5738FF;
     margin-top: 0;
     margin-bottom:5px;
@@ -35,5 +35,13 @@
 
 .sidebar__riscaldamento{
     padding-left: 15px;
+    
+}
 
+.sidebar__riscaldamento > p {
+    font-family: Avenir-Book;
+}
+
+.sidebar__items > span{
+    font-family: Avenir-Book;
 }

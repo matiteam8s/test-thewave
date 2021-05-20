@@ -35,18 +35,28 @@ const Product = ({
         <h3 className="product__brand">{brand}</h3>
         <p className="product__description">{title}</p>
         <div className="product__price">
-          <h2 className="product__priceNew">
+          <h2
+            className="product__priceNew"
+            style={{ color: !formerPrice && "#461E7D" }}
+          >
             <FormattedNumber value={price} style="currency" currency="EUR" />
           </h2>
-          <h4 className="product__priceOld">
-            <FormattedNumber
-              value={formerPrice}
-              style="currency"
-              currency="EUR"
-            />
-          </h4>
+          {formerPrice && (
+            <h4 className="product__priceOld">
+              <FormattedNumber
+                value={formerPrice}
+                style="currency"
+                currency="EUR"
+              />
+            </h4>
+          )}
         </div>
-        <p className="product__additionalInfo">{additionalInfo}</p>
+        <p
+          className="product__additionalInfo"
+          style={{ color: !formerPrice && "#461E7D" }}
+        >
+          {additionalInfo}
+        </p>
         <div className="product__ratingRow">
           <StarRating rating={rating} />
           <FormControlLabel
