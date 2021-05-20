@@ -1,5 +1,6 @@
 export const products = [
   {
+    id: 1,
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -9,6 +10,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 2,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -18,6 +21,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 3,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -27,6 +32,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 4,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -36,6 +43,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 5,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -45,6 +54,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 6,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -54,6 +65,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 7,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -63,6 +76,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 8,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -72,6 +87,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 9,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -81,6 +98,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 10,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -90,6 +109,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 11,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -99,6 +120,8 @@ export const products = [
     rating: 4,
   },
   {
+    id: 12,
+
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",
@@ -108,6 +131,7 @@ export const products = [
     rating: 4,
   },
   {
+    id: 13,
     tag: "Risparmi il 20%",
     brand: "Ariston",
     title: "Matis condens - Condensing Boiler 24kW Methane - Indoor",

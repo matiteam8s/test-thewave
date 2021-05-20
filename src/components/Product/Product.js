@@ -8,6 +8,7 @@ import { FormattedNumber } from "react-intl";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 
 const Product = ({
+  product,
   tag,
   brand,
   title,
@@ -15,11 +16,27 @@ const Product = ({
   formerPrice,
   additionalInfo,
   rating,
+  favorites,
+  setFavorites,
 }) => {
   const [compare, setCompare] = useState(false);
 
   const handleChange = (event) => {
     setCompare((compare) => !compare);
+  };
+
+  const addFavorite = (product) => {
+    let favArray = favorites;
+    const found = favorites.find((f) => f.id === product.id);
+
+    if (found) {
+      favArray = favorites.filter((f) => f.id !== product.id);
+    } else {
+      favArray = [...favorites, product];
+    }
+
+    setFavorites(favArray);
+    localStorage.setItem("favorites", JSON.stringify(favArray));
   };
 
   return (
@@ -29,7 +46,17 @@ const Product = ({
         style={{ backgroundImage: "url('boiler.png')" }}
       >
         <div className="product__tag">{tag}</div>
-        <HeartEmpty className="product__favorite" />
+        {favorites && favorites.includes(product) ? (
+          <HeartFull
+            onClick={(e) => addFavorite(product)}
+            className="product__favorite"
+          />
+        ) : (
+          <HeartEmpty
+            onClick={(e) => addFavorite(product)}
+            className="product__favorite"
+          />
+        )}
       </div>
       <div className="product__info">
         <h3 className="product__brand">{brand}</h3>

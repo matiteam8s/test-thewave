@@ -28,6 +28,7 @@
     height: 17px;
     right: 5px;
     top:10px;
+    cursor: pointer;
 }
 
 .product__brand{

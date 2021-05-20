@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import "./ProductsList.css";
 import { products } from "../../data/productsData";
 import Pagination from "../Pagination/Pagination";
 
-const ProductsList = () => {
+const ProductsList = ({ wishList, setWishList }) => {
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites"));
+    favorites && setFavorites(favorites);
+  }, []);
+
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage, setProductsPerPage] = useState(12);
@@ -21,6 +28,7 @@ const ProductsList = () => {
       <div className="products__list">
         {currentProducts.map((product) => (
           <Product
+            product={product}
             tag={product.tag}
             brand={product.brand}
             title={product.title}
@@ -28,6 +36,9 @@ const ProductsList = () => {
             formerPrice={product.formerPrice}
             additionalInfo={product.additionalInfo}
             rating={product.rating}
+            setWishList={setWishList}
+            favorites={favorites}
+            setFavorites={setFavorites}
           />
         ))}
       </div>

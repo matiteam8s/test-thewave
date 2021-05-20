@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -8,12 +8,14 @@ import Footer from "./components/Footer/Footer";
 import { IntlProvider } from "react-intl";
 
 const App = () => {
+  const [wishList, setWishList] = useState([]);
+
   return (
     <IntlProvider locale="en" defaultLocale="en">
       <div className="App">
         <div className="container">
           <Sidebar />
-          <ProductsList />
+          <ProductsList setWishList={setWishList} wishList={wishList} />
         </div>
         <Footer />
       </div>
